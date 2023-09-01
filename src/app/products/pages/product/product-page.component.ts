@@ -14,6 +14,7 @@ import {
 })
 export class ProductComponentPage implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
   public isProductVisible: boolean = false;
+  public currentPrice: number = 100;
 
   toggleVisibleProduct(): void {
     this.isProductVisible = !this.isProductVisible;
@@ -47,4 +48,7 @@ export class ProductComponentPage implements OnInit, OnChanges, DoCheck, AfterCo
     console.log(">> ngAfterViewInit");
   }
 
+  increasePrice(): void {
+    this.currentPrice += 10;
+  }
 }
